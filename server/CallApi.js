@@ -4,21 +4,19 @@ var CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
 var app = express();
 
 class CallApi {
-  async getAllRepos() {
-    var date = new Date();
-
-    fetch(url + '/search/repositories?q=stars:>=1000')
+  async getAllRepos() {-
+    fetch(url + '/search/repositories?q=stars:>=250&sort=stars')
     .then(res => res.json())
     .then(json => {
       return json;
     });
   }
 
-  login(user, password) {
+  starRepos(owner, repo) {
     var options = {
       host: url,
       port: 80,
-      path: '/search/repositories?',
+      path: '/user/starred/'+ owner +'/'+ repo,
       method: 'GET'
     };
   }

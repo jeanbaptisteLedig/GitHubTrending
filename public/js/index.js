@@ -7,7 +7,7 @@ $(function(){
       data.items.forEach(function(repo) {
         $("#reposList")
           .append(
-            "<div class='repo'><span>" + repo.name +"</span><button>Star</button><br><span>"+ repo.description +"</span></div><br>");
+            "<div class='repo'><span>" + repo.full_name + "</span><button>Star</button><p>Stars : "+repo.stargazers_count+"</p><br><span>"+ repo.description +"</span></div></br><hr>");
       });
     },
     error: function(error) {

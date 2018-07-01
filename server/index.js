@@ -8,7 +8,7 @@ const PUBLIC_FOLDER = path.join(__dirname, "../public");
 
 var url = 'https://api.github.com';
 const REDIS_PORT = 6379;
-const PORT = process.env.PORT || 5042;
+const PORT = process.env.PORT || 8080;
 const REDIS_HOST =  process.env.REDIS_URL || '127.0.0.1';
 
 const app = express();
@@ -32,7 +32,6 @@ app.get("/repos", (req, res) => {
         fetch(url + '/search/repositories?q=stars:>=1000')
         .then(res => res.json())
         .then(json => {
-          console.log("JSON:",  json);
           redisclient.set('repos', json);
           redisclient.expire('repos', 3600);
           res.send(json);
