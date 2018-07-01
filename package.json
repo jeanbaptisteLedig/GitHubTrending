@@ -1,0 +1,31 @@
+{
+  "name": "githubtrending",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "node-fetch": "2.1.2",
+    "path": "^0.12.7",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "8.11.1",
+    "npm": "5.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeanbaptisteLedig/GitHubTrending.git"
+  },
+  "author": "Jean-Baptiste LEDIG",
+  "license": "UNLICENSED"
+}

@@ -1,0 +1,14 @@
+.repo {
+  width: 100%; 
+  height: 40px;
+  width:100%;
+}
+.repo:nth-child(even) {
+  background-color:#CCCCCC;
+  font-size:16px;
+  font-style: bold;
+}
+.repo:nth-child(odd) {
+  color:#CC1100;
+  background-color:#FFFFFF
+}
